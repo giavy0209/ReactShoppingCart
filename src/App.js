@@ -18,6 +18,7 @@ function App() {
 
   const addToCart = useCallback(id=>{
     var idx = CurrentListProduct.findIndex(o => o._id === id)
+
     if(CurrentListProduct[idx].haveInCart){
       var idxCart = CurrentListCart.findIndex(o => o._id === id)
       CurrentListCart[idxCart].quantity = CurrentListCart[idxCart].quantity + CurrentListProduct[idx].quantity
@@ -26,10 +27,13 @@ function App() {
     }else{
       if(CurrentListCart) {
         CurrentListCart.push(CurrentListProduct[idx])
-        setCurrentListCart(CurrentListCart)
+        setCurrentListCart([...CurrentListCart])
+
       }else{
-        setCurrentListCart([...[CurrentListProduct[idx]]])
+        setCurrentListCart([CurrentListProduct[idx]])
+
       }
+
       CurrentListProduct[idx].haveInCart = 1
       setCurrentListProduct([...CurrentListProduct])
     }
