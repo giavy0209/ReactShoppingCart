@@ -98,7 +98,7 @@ h1.title{
 }
 
 .list-product .product .add-cart input{
-  width: 50%;
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   font-size: 18px;
