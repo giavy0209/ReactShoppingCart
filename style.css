@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.row{
+    margin: 0 -15px;
+    font-size: 0;
+}
+
+.row [class*="col-"]{
+    display: inline-block;
+    font-size: 14px;
+    padding: 15px;
+}
+
+.row.va-t [class*="col-"]{
+    vertical-align: top;
+}
+
+.col-4{
+    width: 33.333333%;
+}
+
+.col-6{
+    width: 50%;
+}
+
+.col-8{
+    width: 66.666666%;
+}
+
+.img {
+display: block;
+position: relative; }
+.img img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover; }
+
+.img-1-1::before {
+content: '';
+display: block;
+padding-top: 100%;
+background-color: transparent; }
+
+h1.title{
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.list-product{
+    border: 1px solid #337ab7;
+    border-radius: 5px;
+    font-size: 0;
+}
+
+.list-product .title{
+    padding: 10px;
+    color: #fff;
+    background-color: #337ab7;
+    font-size: 18px;
+}
+
+.list-product .product{
+   padding:15px;
+}
+
+.list-product .product + .product{
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.list-product .product >*{
+    width: 25%;
+    display: inline-block;
+    font-size: 14px;
+    padding:15px;
+    vertical-align: top;
+}
+
+.list-product .product .product-des{
+    width: 50%;
+}
+
+.list-product .product .add-cart{
+    text-align: center;
+}
+
+.list-product .product .add-cart input{
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.list-product .product .add-cart button{
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FF4000;
+    color: #fff;
+    border: none;
+}
+
+.list-product .product .add-cart button.disable{
+    background-color: #ccc ;
+    pointer-events: none;
+}
+
+.cart{
+    border: 1px solid #bce8f1 ;
+    border-radius: 5px;
+}
+
+.cart .title{
+    padding: 10px;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-bottom: 1px solid #bce8f1;
+}
+
+.cart table{
+    width: 100%;
+}
+.cart table tr{
+    font-size: 0;
+}
+td, th{
+    font-size: 14px;
+}
+.cart table td, .cart table th{
+    padding: 10px;
+}
+
+
+.cart table tr td{
+    text-align: center;
+}
+
+.cart table tr td .update{
+    background-color:#5bc0de;
+    color: #fff;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.cart table tr td .delete{
+    background-color:#d9534f;
+    color: #fff;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 2px;
+}
