@@ -26,7 +26,8 @@ function App() {
 
     }else{
       if(CurrentListCart) {
-        CurrentListCart.push(CurrentListProduct[idx])
+        var obj = {...CurrentListProduct[idx]}
+        CurrentListCart.push(obj)
         setCurrentListCart([...CurrentListCart])
 
       }else{
